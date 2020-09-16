@@ -1,6 +1,8 @@
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
+const GREEN: &str = "\x1b[92m";
+const RED: &str = "\x1b[91m";
 
 fn main() {
 
@@ -32,10 +34,10 @@ fn main() {
         
         if _count < value {
             match guess.cmp(&secret_number) {
-                Ordering::Less => println!("Too small!\n{} attempts left",values),
-                Ordering::Greater => println!("Too big!\n{} attempts left", values),
+                Ordering::Less => println!("{} Too small!\n{} attempts left",RED,values),
+                Ordering::Greater => println!("{} Too big!\n{} attempts left",RED, values),
                 Ordering::Equal => {
-                    println!("You win!");
+                    println!("{} You win!",GREEN);
                     break;
                 }
             }
