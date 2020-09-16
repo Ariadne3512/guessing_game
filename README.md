@@ -1,3 +1,3 @@
 # guessing_game
 
-Um simples jogo de adivinhar baseado no site oficial do Rust
+A simple guessing game based on the official Rust website
